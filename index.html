@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mayar Kh.</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div id="hero"></div>
+    </main>
+  </body>
+  <script>
+    const hero = document.querySelector("#hero");
+    const categories = [
+      {
+        title: "Burger",
+        img: "https://res.cloudinary.com/dha2m9q8b/image/upload/v1684767602/Mayar/burger-half_s0tfb9.png",
+        bg: "#DE1F26",
+      },
+      {
+        title: "Checky",
+        img: "https://res.cloudinary.com/dha2m9q8b/image/upload/v1684767602/Mayar/checky-half_tpjuhh.png",
+        bg: "#FF9433",
+      },
+      {
+        title: "Beverages",
+        img: "https://res.cloudinary.com/dha2m9q8b/image/upload/v1684767601/Mayar/beverages-half_vriuox.png",
+        bg: "#31B5B0",
+      },
+    ];
+
+    categories.map(
+      (cat, index) =>
+        (hero.innerHTML += `
+        <a href="./category.html?${cat.title.toLocaleLowerCase()}">
+            <section style="background-color:${cat.bg}">
+                <h2>${cat.title}</h2>
+                <img src=${cat.img} alt=${cat.title} />
+            </section>
+        </a>
+    `)
+    );
+  </script>
+</html>

@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f9f7f3;
+  font-family: "Corben", cursive;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cat-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  align-items: center;
+}
+#hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: nowrap;
+  width: 100%;
+}
+#hero section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  padding-top: 75px;
+}
+#hero section img {
+  align-self: flex-end;
+  height: 400px;
+  object-fit: fill;
+}
+#hero a {
+  color: white;
+  cursor: pointer;
+}
+.products {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+.product-beveragess {
+  position: relative;
+  width: 100%;
+}
+.product {
+  position: relative;
+  width: 100%;
+}
+
+.white-bg {
+  z-index: -1;
+}
+.red-bg {
+  display: hidden;
+  position: absolute;
+}
+.content {
+  z-index: 50;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  height: 180px;
+}
+.content .img {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  margin-left: 80px;
+}
+.content img {
+  width: 200px;
+  object-fit: contain;
+}
+.beverages {
+  z-index: 50;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  height: 180px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.beverages .img {
+  bottom: 0px;
+  left: 0;
+  margin-left: 80px;
+}
+.beverages .img img {
+  object-fit: contain;
+  height: 200px;
+}
+
+.content .description {
+  position: absolute;
+  width: max-content;
+  bottom: -30px;
+  left: 10px;
+  margin-left: 80px;
+}
+.content span {
+  font-size: 20px;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke: 0.5px#707070;
+}
+
+.product:hover .img {
+  transform: translateY(-30px);
+  transition-duration: 1000ms;
+}
+.product:hover .content h3,
+.product:hover .content span {
+  color: white;
+}
+.product:hover .content span {
+  color: white;
+  -webkit-text-stroke: 1.5px#fff;
+  -webkit-text-fill-color: #de1f26;
+}
+.product:hover .svg {
+  color: #de1f26;
+}
+.product:hover .price {
+  opacity: 1;
+  position: absolute;
+  right: 110px;
+  bottom: 130px;
+  width: fit-content;
+  padding: 10px 17px;
+  margin-bottom: 3px;
+  border-radius: 8px;
+  background-color: #770f1288;
+  color: white;
+  box-shadow: inset 0 0 6px -2px #de1f26;
+  transition-duration: 200ms;
+  transition: all 200ms ease-in;
+}
+.svg {
+  color: #fff;
+}
+.product-beveragess:hover .svg {
+  color: #c5fff7;
+}
+.product-beveragess:hover .img {
+  transform: translateY(-30px);
+  transition-duration: 1000ms;
+}
+.price {
+  opacity: 0;
+}
+.product-beveragess:hover .price {
+  opacity: 1;
+  width: fit-content;
+  padding: 10px 17px;
+  border-radius: 8px;
+  background-color: #b1e8e1;
+  box-shadow: inset 0 0 10px #11e3c7;
+  transition-duration: 200ms;
+  transition: all 200ms ease-in;
+  margin-bottom: 5px;
+}
+
+.product,
+.product-beveragess {
+  cursor: pointer;
+}
+.navigator {
+  position: absolute;
+  bottom: 50px;
+}
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
